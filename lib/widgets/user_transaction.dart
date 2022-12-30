@@ -24,12 +24,30 @@ class _UserTransactionState extends State<UserTransaction> {
     )
   ];
 
+  void _addNewTransaction(String txTitle, double txAmount) {
+    final newTx = Transaction(
+      id: DateTime.now().toString(),
+      title: txTitle,
+      amount: txAmount,
+      date: DateTime.now(),
+    );
+
+    setState(() {
+      _userTransactions.add(
+          newTx); // final variable can't use '=' BUT can manipulate the list object
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        NewTransaction(),
-        TransactionList(transactions: _userTransactions),
+        NewTransaction(
+          userTransaction: _addNewTransaction,
+        ),
+        TransactionList(
+          transactions: _userTransactions,
+        ),
       ],
     );
   }
