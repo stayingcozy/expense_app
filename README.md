@@ -1,6 +1,6 @@
 <!-- Insert logo -->
 <div align="center">
-    <img src="images/expenseapp-logo.png" alt="Logo" width="160" height="160">
+    <img src="images/expenseapp-logo.png" alt="Logo" width="200" height="200">
 </div>
 
 # expense app
@@ -10,7 +10,6 @@ Hello world to flutter project. Made for windows desktop and chrome web.
 ## About the project
 <!-- Insert snapshot photo -->
 ![screenshot image](images/Screenshot-expenseapp.png)
-
 
 ## Getting Started
 
