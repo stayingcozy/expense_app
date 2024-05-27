@@ -1,11 +1,17 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
+class NewTransaction extends StatefulWidget {
   final Function userTransaction;
   NewTransaction({this.userTransaction});
 
+  @override
+  State<NewTransaction> createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
   final titleController = TextEditingController();
+
   final amountController = TextEditingController();
 
   void submitData() {
@@ -16,7 +22,9 @@ class NewTransaction extends StatelessWidget {
       return;
     }
 
-    userTransaction(enteredTitle, enteredAmount);
+    widget.userTransaction(enteredTitle, enteredAmount);
+
+    Navigator.of(context).pop(); // close transition window when done
   }
 
   @override
