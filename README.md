@@ -20,4 +20,4 @@ Hello world to flutter project. Made for windows desktop and chrome web.
 #### Usage
 <!-- run program -->
 - [Steps to Run Flutter in VS Code](https://docs.flutter.dev/get-started/test-drive?tab=vscode)
-
+Run in `Windows (windows-x64)` or `Chrome (web-javascript)`
